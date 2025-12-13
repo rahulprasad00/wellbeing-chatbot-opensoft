@@ -1,0 +1,13 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "OPENSOFT",
+            "Group": "GC-Opensoft",
+            "Host": "opensoft-rarex03rnc-4381.f.aivencloud.com",
+            "Port": 5432,
+            "MaintenanceDB": "defaultdb",
+            "Username": "rahul",
+            "SSLMode": "require"
+        }
+    }
+}

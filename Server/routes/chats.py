@@ -275,33 +275,29 @@ def get_messages(conversation_id:str,request:Request,db:Session=Depends(get_db))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-#Returns users whose reports are generated today
+#Returns employees who have completed conversations and a report link (from Master table)
 @router.get("/todays_reports")
 def fetch_todays_conv(db: Session = Depends(get_db)):
     try:
-        today = datetime.today().date()
-        # Get conversations with today's date and report not empty
-        conversations = db.query(Conversation).filter(
-            Conversation.date == today,
-            Conversation.report != ""
+        completed_employees = db.query(Master).filter(
+            Master.conversation_completed == True,
+            Master.report != ""
         ).all()
 
         combined_data = []
-        for conv in conversations:
-            employee = db.query(Master).filter(Master.employee_id == conv.employee_id).first()
-            if employee:
-                combined_data.append({
-                    "Employee_ID": employee.employee_id,
-                    "Employee_Name": employee.employee_name,
-                    "Employee_Email": employee.employee_email,
-                    "Employee_Role":employee.role,
-                    "Is_Selected":employee.is_selected,
-                    "Is_Flagged":employee.is_Flagged,
-                    "Report": conv.report,
-                    "Feature_Vector":employee.feature_vector,
-                    "Conversation_Completed":employee.conversation_completed,
-                    "Sentimental_Score":employee.sentimental_score,
-                    })
+        for employee in completed_employees:
+            combined_data.append({
+                "Employee_ID": employee.employee_id,
+                "Employee_Name": employee.employee_name,
+                "Employee_Email": employee.employee_email,
+                "Employee_Role": employee.role,
+                "Is_Selected": employee.is_selected,
+                "Is_Flagged": employee.is_Flagged,
+                "Report": employee.report,  # S3 link stored on Master
+                "Feature_Vector": employee.feature_vector,
+                "Conversation_Completed": employee.conversation_completed,
+                "Sentimental_Score": employee.sentimental_score,
+            })
         return combined_data
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -395,7 +391,7 @@ def generate(request: PromptRequest):
 async def transcribe_audio(audio: UploadFile = File(...)):
     """Convert speech audio to text using Deepgram"""
     if not DEEPGRAM_API_KEY:
-        raise HTTPException(status_code=500, detail="Deepgram API key not configured") 
+        raise HTTPException(status_code=503, detail="Speech-to-text not configured (missing DEEPGRAM_API_KEY)")
     try:
         audio_content = await audio.read()
         # Send to Deepgram
@@ -410,7 +406,10 @@ async def transcribe_audio(audio: UploadFile = File(...)):
             )
             
             if response.status_code != 200:
-                raise HTTPException(status_code=response.status_code, detail="Failed to transcribe audio")
+                raise HTTPException(
+                    status_code=response.status_code,
+                    detail=f"Failed to transcribe audio: {response.text}"
+                )
             
             result = response.json()
 

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1in;
+        }
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            word-wrap: break-word;
+        }
+        .container {
+            width: 100%;
+        }
+        .report-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 180px;
+        }
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .section-title {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .report-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        .flagged-banner {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #7f1d1d, #b91c1c, #e11d48);
+            color: #fff;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 24px 0;
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.28);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .flagged-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 35%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.12), transparent 40%);
+            pointer-events: none;
+        }
+        .flagged-icon {
+            z-index: 1;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        .flagged-copy {
+            z-index: 1;
+        }
+        .flagged-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .flagged-note {
+            margin: 6px 0 0;
+            font-size: 14px;
+            color: #ffe4e6;
+        }
+        .footer {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #6c757d;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-container">
+        <!-- Logo -->
+        {% if report_data.logo_url %}
+        <div class="logo-container">
+            <img src="{{ report_data.logo_url }}" alt="Company Logo">
+        </div>
+        {% endif %}
+
+        <h2 class="text-center mb-4">Employee Report</h2>
+        <p class="text-center"><strong>Report Date:</strong> {{ report_data.report_date }}</p>
+        <p class="text-center"><strong>Employee ID:</strong> {{ report_data.employee_id }}</p>
+
+        <!-- Flagged Notice -->
+        {% if report_data.flagged %}
+        <div class="flagged-banner">
+            <div class="flagged-icon">!</div>
+            <div class="flagged-copy">
+                <div class="flagged-status">Status: Flagged</div>
+                <p class="flagged-note">This employee requires immediate HR attention based on recent signals.</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Executive Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Executive Summary</h4>
+            <div>{{ report_data.executive_summary | safe }}</div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="report-section">
+            <h4 class="section-title">Personal Details</h4>
+            <p>{{ report_data.personal_details }}</p>
+        </div>
+
+        <!-- Data Analysis Pre-Conversation -->
+        <div class="report-section">
+            <h4 class="section-title">Data Analysis Pre-Conversation</h4>
+            <p>{{ report_data.data_analysis_pre_conversation }}</p>
+        </div>
+
+        <!-- Conversation Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Conversation Summary</h4>
+            <p>{{ report_data.conversation_summary }}</p>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="report-section">
+            <h4 class="section-title">Sentiment Analysis</h4>
+            <p>{{ report_data.sentiment_analysis }}</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 HR Analytics Report System</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

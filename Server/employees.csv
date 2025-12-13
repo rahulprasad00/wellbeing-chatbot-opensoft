@@ -1,0 +1,15 @@
+employee_id,employee_name,employee_email,password,is_selected,shap_values,report,sentimental_score,is_resolved,role,work_hours,leave_days,leave_type,performance_rating,manager_feedback,promotion_consideration,reward_points,award_type,team_messages_sent,vibe_score
+EMP0184,,,,,"Performance_Rating,Promotion_Consideration,Leave_Type",,0,FALSE,,4.01,7,Unpaid Leave,1,Exceeds Expectations,FALSE,392,Innovation Award,6,2
+EMP0190,,,,,"Leave_Days,Work_Hours,Leave_Type,Performance_Rating",,0,FALSE,,9.14,1,Unpaid Leave,2,Meets Expectations,TRUE,250,Star Performer,44,3
+EMP0214,,,,,"Promotion_Consideration,Work_Hours,Leave_Type,Leave_Days",,0,FALSE,,9.23,3,Unpaid Leave,4,Meets Expectations,FALSE,250,Star Performer,12,4
+EMP0251,,,,,Leave_Type,,0,FALSE,,4.1,6,Unpaid Leave,3,Meets Expectations,TRUE,118,Best Team Player,22,2
+EMP0269,,,,,"Work_Hours,Leave_Days,Reward_Points",,0,FALSE,,9.55,4,Casual Leave,3,Meets Expectations,TRUE,44,Best Team Player,30,1
+EMP0377,,,,,"Performace_Rating,Manager_Feedback",,0,FALSE,,6.3,3,Annual Leave,2,Meets Expectations,TRUE,140,Best Team Player,16,2
+EMP0384,,,,,Work_Hours,,0,FALSE,,4.01,10,Sick Leave,3,Exceeds Expectations,TRUE,70,Star Performer,45,6
+EMP0452,,,,,"Performance_Rating,Promotion_Considerations",,0,FALSE,,7.3,11,Annual Leave,1,Exceeds Expectations,FALSE,394,Leadership Excellence,25,1
+EMP0458,,,,,"Work_Hours,Performance_Rating,Promotion_Consideration,Reward_Points",,0,FALSE,,9.08,14,Sick Leave,1,Exceeds Expectations,FALSE,99,Leadership Excellence,26,3
+EMP0461,,,,,"Promotion_Consideration,Performance",,0,FALSE,,4.16,13,Casual Leave,2,Exceeds Expectations,FALSE,16,Innovation Award,23,2
+EMP0472,,,,,"Leave_Type,Promotion_Consideration,Leave_Days,Manager_Feedback",,0,FALSE,,7.32,3,Unpaid Leave,1,Meets Expectations,FALSE,270,Star Performer,48,2
+EMP0473,,,,,"Leave_Days,Leave_Type,Work_Hours,Performance_Rating",,0,FALSE,,7.65,4,Sick Leave,3,Exceeds Expectations,TRUE,260,Star Performer,41,1
+EMP0481,,,,,"Work_Hours,Manager_Feedback,Team_Messages_Sent,Leave_Days",,0,FALSE,,4.9,6,Sick Leave,3,Needs Improvement,TRUE,272,Star Performer,8,6
+EMP0498,,,,,"Manager_Feedback,Performance_Rating,Leave_Type,Leave_Days",,0,FALSE,,7.5,13,Annual Leave,2,Needs Improvement,TRUE,351,Star Performer,26,5

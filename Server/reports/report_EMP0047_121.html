@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1in;
+        }
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            word-wrap: break-word;
+        }
+        .container {
+            width: 100%;
+        }
+        .report-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 180px;
+        }
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .section-title {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .report-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        .flagged-banner {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #7f1d1d, #b91c1c, #e11d48);
+            color: #fff;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 24px 0;
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.28);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .flagged-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 35%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.12), transparent 40%);
+            pointer-events: none;
+        }
+        .flagged-icon {
+            z-index: 1;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        .flagged-copy {
+            z-index: 1;
+        }
+        .flagged-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .flagged-note {
+            margin: 6px 0 0;
+            font-size: 14px;
+            color: #ffe4e6;
+        }
+        .footer {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #6c757d;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-container">
+        <!-- Logo -->
+        
+
+        <h2 class="text-center mb-4">Employee Report</h2>
+        <p class="text-center"><strong>Report Date:</strong> 2025-12-13</p>
+        <p class="text-center"><strong>Employee ID:</strong> EMP0047</p>
+
+        <!-- Flagged Notice -->
+        
+
+        <!-- Executive Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Executive Summary</h4>
+            <div><p>Insights Based on the Conversation:<br>### Employee&#x27;s Mood, Concerns, and Sentiments:<br>1. Mood:<br>2. Concerns:<br>3. Sentiments:<br>### Key Issues or Recurring Themes:<br>1. Chronic Stress and Mental Exhaustion:<br>2. Work-Life Balance:<br>3. Anxiety Surrounding Workplace Communication:<br>4. Impact on Wellbeing:<br>### Suggestions or Recommendations to Improve the Situation:<br>1. Open Communication:<br>2. Implementing Support Systems:<br>3. Encouraging a Culture of Wellbeing:<br>4. Strategic Workload Management:<br>5. Regular Check-ins:<br>By addressing these issues with empathy and practical support, both the employee&#x27;s wellbeing and productivity can be improved, fostering a healthier workplace environment.</p><ul><li>- The employee is experiencing a significant level of stress and mental exhaustion.</li><li>- There is a sense of anxiety, as evidenced by the employee&#x27;s repeated expressions of worry and feeling overwhelmed.</li><li>- Fear of negative consequences for taking leave, such as falling behind at work or being judged by colleagues.</li><li>- The pressure of maintaining availability and managing a constant workload.</li><li>- The impact of these stressors on personal wellbeing, including sleep disturbances, lack of focus, and decreased motivation.</li><li>- The employee feels stuck and anxious about addressing these issues with their supervisor or team.</li><li>- There is a desire for reassurance, clear guidance, and emotional support to navigate the situation.</li><li>- The employee is experiencing chronic stress due to the inability to take necessary time off, leading to mental exhaustion.</li><li>- Difficulty in balancing work responsibilities with the need for personal time and self-care.</li><li>- The employee is anxious about discussing workload and leave concerns with their supervisor, fearing misunderstanding or negative repercussions.</li><li>- The stress and anxiety are affecting the employee&#x27;s sleep, focus, motivation, and overall mental health.</li><li>- Encourage a conversation with the supervisor about workload management and the necessity of taking time off. This can be facilitated by preparing a list of specific concerns and potential solutions beforehand to alleviate anxiety.</li><li>- The organization could introduce support systems such as mental health resources, stress management workshops, or peer support groups to assist employees in managing stress and anxiety.</li><li>- Promote a workplace culture that values employee wellbeing by normalizing discussions about mental health and the importance of taking breaks without fear of judgment or negative consequences.</li><li>- Develop strategies to manage workload, such as delegating tasks, prioritizing essential duties, and utilizing flexible work arrangements where possible.</li><li>- Establish regular check-ins with employees to discuss workload and wellbeing, ensuring employees feel supported and heard.</li></ul></div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="report-section">
+            <h4 class="section-title">Personal Details</h4>
+            <p>Guest (EMP0047) | guest@gmail.com</p>
+        </div>
+
+        <!-- Data Analysis Pre-Conversation -->
+        <div class="report-section">
+            <h4 class="section-title">Data Analysis Pre-Conversation</h4>
+            <p><ul><li><strong>Days_since_joining</strong>: 723</li><li><strong>Days_since_last_leave</strong>: 475</li><li><strong>Annual_Leaves</strong>: 10</li><li><strong>Sick_Leaves</strong>: 8</li><li><strong>Average_Performance_Rating</strong>: 3.0</li></ul></p>
+        </div>
+
+        <!-- Conversation Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Conversation Summary</h4>
+            <p><p>Chatbot: Hello Guest! This is just a regular check-in to see how you&#x27;re doing today—hope all is well!</p><p>Employee: Yes, I’ve postponed taking leave several times even when I clearly needed it. What held me back was the constant workload, fear of falling behind, and the pressure to always be available. Over time, this has left me feeling chronically stressed and mentally exhausted. I’ve noticed it affecting my sleep, focus, and motivation, but I still hesitate to take leave because I worry it will be seen negatively or create more problems later</p><p>Chatbot: How might addressing these concerns with your supervisor or team help you find a balance between taking necessary time off and managing your workload effectively?</p><p>Employee: I think addressing it could help, but the thought of bringing it up makes me anxious. I’m already mentally exhausted, and worrying about being misunderstood or overburdened has affected my focus and wellbeing. I feel stuck between needing time off and fearing the consequences at work</p><p>Chatbot: What support systems or strategies could help you manage your anxiety and exhaustion while considering the conversation you need to have at work?</p><p>Employee: Right now, having clear guidance, reassurance, and emotional support would help, because my anxiety and exhaustion are making it hard to cope. I feel mentally drained and overwhelmed, and without support, even the thought of having this conversation at work adds to my stress and affects my wellbeing.</p><p>Chatbot: Have you ever hesitated to take a leave due to workload or team pressure?</p><p>Employee: Yes, I’ve often hesitated because of workload and team pressure. The fear of falling behind and being judged has left me anxious and mentally exhausted, and it’s started to affect my sleep, focus, and overall wellbeing</p><p>Chatbot: How might you prioritize self-care and address these concerns while maintaining your responsibilities at work?</p><p>Employee: This stays concise and typically scores above 50 due to anxiety, exhaustion, overwhelm, and wellbeing impact.</p><p>Chatbot: How do you typically manage or mitigate these feelings of anxiety and overwhelm to maintain your wellbeing?</p><p>Chatbot: Insights Based on the Conversation:</p><p>### Employee&#x27;s Mood, Concerns, and Sentiments:</p><p>1. Mood:</p><p>- The employee is experiencing a significant level of stress and mental exhaustion.</p><p>- There is a sense of anxiety, as evidenced by the employee&#x27;s repeated expressions of worry and feeling overwhelmed.</p><p>2. Concerns:</p><p>- Fear of negative consequences for taking leave, such as falling behind at work or being judged by colleagues.</p><p>- The pressure of maintaining availability and managing a constant workload.</p><p>- The impact of these stressors on personal wellbeing, including sleep disturbances, lack of focus, and decreased motivation.</p><p>3. Sentiments:</p><p>- The employee feels stuck and anxious about addressing these issues with their supervisor or team.</p><p>- There is a desire for reassurance, clear guidance, and emotio</p></p>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="report-section">
+            <h4 class="section-title">Sentiment Analysis</h4>
+            <p>Sentiment score: 31 / 100. Flagged: No.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 HR Analytics Report System</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

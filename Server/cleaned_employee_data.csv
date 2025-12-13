@@ -1,0 +1,15 @@
+Employee_ID,Work_Hours,Leave_Days,Leave_Type,Performance_Rating,Manager_Feedback,Promotion_Consideration,Reward_Points,Award_Type,Teams_Messages_Sent,Vibe_Score,shap
+EMP0184,4.01,7,Unpaid Leave,1,Exceeds Expectations,FALSE,392,Innovation Award,6,2,"[Performance_Rating,Promotion_Consideration,Leave_Type]"
+EMP0190,9.14,1,Unpaid Leave,2,Meets Expectations,TRUE,290,Leadership Excellence,44,3,"[Leave_Days,Work_Hours,Leave_Type,Performance_Rating]"
+EMP0214,9.23,3,Unpaid Leave,4,Meets Expectations,FALSE,290,Star Performer,12,4,"[Promotion_Consideration,Work_Hours,Leave_Type,Leave_Days]"
+EMP0251,4.1,6,Unpaid Leave,4,Meets Expectations,TRUE,118,Best Team Player,22,2,[Leave_Type]
+EMP0269,9.55,4,Casual Leave,4,Needs Improvement,FALSE,44,Best Team Player,30,1,"[Work_Hours,Leave_Days,Reward_Points]"
+EMP0377,6.3,3,Annual Leave,2,Meets Expectations,TRUE,140,Best Team Player,16,2,"[Performace_Rating,Manager_Feedback]"
+EMP0384,4.01,10,Sick Leave,3,Exceeds Expectations,TRUE,70,Star Performer,45,6,[Work_Hours]
+EMP0452,5.02,11,Annual Leave,1,Exceeds Expectations,FALSE,394,Leadership Excellence,50,1,"[Performance_Rating,Promotion_Considerations]"
+EMP0458,9.08,14,Sick Leave,1,Exceeds Expectations,FALSE,99,Leadership Excellence,26,3,"[Work_Hours,Performance_Rating,Promotion_Consideration,Reward_Points]"
+EMP0461,4.16,13,Casual Leave,2,Exceeds Expectations,FALSE,16,Innovation Award,23,2,"[Promotion_Consideration,Performance]"
+EMP0472,7.32,3,Unpaid Leave,1,Meets Expectations,FALSE,290,Star Performer,48,2,"[Leave_Type,Promotion_Consideration,Leave_Days,Manager_Feedback]"
+EMP0473,7.65,4,Sick Leave,3,Exceeds Expectations,TRUE,290,Innovation Award,41,1,"[Leave_Days,Leave_Type,Work_Hours,Performance_Rating]"
+EMP0481,4.9,6,Sick Leave,3,Needs Improvement,TRUE,272,Star Performer,8,6,"[Work_Hours,Manager_Feedback,Team_Messages_Sent,Leave_Days]"
+EMP0498,5.02,13,Annual Leave,2,Needs Improvement,TRUE,351,Star Performer,50,5,"[Manager_Feedback,Performance_Rating,Leave_Type,Leave_Days,]"

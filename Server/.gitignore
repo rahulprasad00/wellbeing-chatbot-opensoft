@@ -1,0 +1,36 @@
+# Python virtual environments
+venv/
+/venv
+.venv/
+.env
+.env.*
+!.env.example
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local data
+vectorstore.db/
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Shell config
+.zshrc

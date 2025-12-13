@@ -67,15 +67,24 @@ export function EmployeeReports({
   );
 
   const conversed_employees: EmployeeReport[] = useMemo(
-    () =>
-      (employeesWithReports || []).map((employee) => ({
+    () => {
+      const mapped = (employeesWithReports || []).map((employee) => ({
         id: employee.Employee_ID,
         name: employee.Employee_Name,
         position: employee.Employee_Role,
         flagged: employee.Is_Flagged,
         conversation_completed: employee.Conversation_Completed,
         report_link: employee.Report,
-      })),
+      }));
+
+      // Guard against duplicate ids coming from the API so React keys stay unique
+      const seen = new Set<string>();
+      return mapped.filter((emp) => {
+        if (seen.has(emp.id)) return false;
+        seen.add(emp.id);
+        return true;
+      });
+    },
     [employeesWithReports]
   );
 
@@ -91,8 +100,9 @@ export function EmployeeReports({
   //   }
   // }, [activeTab]);
 
-  const handleDownload = (pdfUrl: string) => {
-    window.open(pdfUrl, "_blank");
+  const handleOpenReport = (pdfUrl: string) => {
+    if (!pdfUrl) return;
+    window.open(pdfUrl, "_blank", "noopener,noreferrer");
   };
 
   // Filter reports based on search query
@@ -156,7 +166,7 @@ export function EmployeeReports({
                 All
               </span>
               <span className="hidden sm:block data-[state=active]:!text-black">
-                All Reports
+                All Employees
               </span>
             </TabsTrigger>
             <TabsTrigger
@@ -312,10 +322,10 @@ export function EmployeeReports({
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => handleDownload(report.report_link)}
+                            onClick={() => handleOpenReport(report.report_link)}
                             className="px-2 text-[#26890d] border border-[#26890d]/30 hover:bg-[#2a2f1e] hover:text-[#26890d] hover:border-[#26890d]/30 hover:opacity-100"
                           >
-                            <View size={14} className="mr-1" /> PDF
+                            <View size={14} className="mr-1" /> Open
                           </Button>
                         </TableCell>
                       </TableRow>
@@ -386,10 +396,10 @@ export function EmployeeReports({
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => handleDownload(report.report_link)}
+                            onClick={() => handleOpenReport(report.report_link)}
                             className="px-2 text-[#26890d] border border-[#26890d]/30 hover:bg-[#2a2f1e] hover:text-[#26890d] hover:border-[#26890d]/30 hover:opacity-100"
                           >
-                            <View size={14} className="mr-1" /> PDF
+                            <View size={14} className="mr-1" /> Open
                           </Button>
                         </TableCell>
                       </TableRow>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1in;
+        }
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            word-wrap: break-word;
+        }
+        .container {
+            width: 100%;
+        }
+        .report-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 180px;
+        }
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .section-title {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .report-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        .flagged-banner {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #7f1d1d, #b91c1c, #e11d48);
+            color: #fff;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 24px 0;
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.28);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .flagged-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 35%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.12), transparent 40%);
+            pointer-events: none;
+        }
+        .flagged-icon {
+            z-index: 1;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        .flagged-copy {
+            z-index: 1;
+        }
+        .flagged-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .flagged-note {
+            margin: 6px 0 0;
+            font-size: 14px;
+            color: #ffe4e6;
+        }
+        .footer {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #6c757d;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-container">
+        <!-- Logo -->
+        
+
+        <h2 class="text-center mb-4">Employee Report</h2>
+        <p class="text-center"><strong>Report Date:</strong> 2025-12-13</p>
+        <p class="text-center"><strong>Employee ID:</strong> EMP0047</p>
+
+        <!-- Flagged Notice -->
+        
+        <div class="flagged-banner">
+            <div class="flagged-icon">!</div>
+            <div class="flagged-copy">
+                <div class="flagged-status">Status: Flagged</div>
+                <p class="flagged-note">This employee requires immediate HR attention based on recent signals.</p>
+            </div>
+        </div>
+        
+
+        <!-- Executive Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Executive Summary</h4>
+            <div><p>## Insights from Employee-Chatbot Conversation<br>### Employee&#x27;s Mood, Concerns, and Sentiments:<br>### Key Issues or Recurring Themes:<br>### Suggestions and Recommendations:<br>1. Work Schedule Adjustment:<br>2. Employee Well-being Initiatives:<br>3. Enhanced Communication:<br>By addressing these areas, the organization can improve employee well-being and potentially boost productivity and satisfaction.</p><ul><li>- Mood: The employee appears to be experiencing fatigue, indicating a potentially stressed or weary state of mind. The use of &quot;very tired&quot; suggests a significant level of exhaustion.</li><li>- Concerns: The primary concern expressed by the employee is the impact of late-night work on their exhaustion. However, they do not express any concerns about their leave allowance or work-life balance, indicating satisfaction in these areas.</li><li>- Sentiments: The sentiment towards the current leave policy is positive, as the employee describes it as &quot;pretty good.&quot; This suggests contentment with the allowance and its role in maintaining work-life balance.</li><li>- Work Schedule: The primary issue raised is the employee&#x27;s late-night work, which is contributing to their tiredness. It suggests a potential imbalance in work scheduling or workload management.</li><li>- Work-Life Balance: While the leave allowance is seen positively, the conversation hints at possible misalignment between work schedules and personal well-being, as highlighted by the employee&#x27;s tiredness.</li><li>- Leave Allowance: The employee appreciates the leave policy, indicating that it provides adequate support for their needs. This highlights a strong policy in place for leave but may overshadow the need for attention to workload distribution and scheduling.</li><li>- Flexible Scheduling: Introduce or enhance flexible work schedules that allow employees to manage their work hours better, potentially reducing the need for late-night work.</li><li>- Workload Assessment: Conduct a thorough assessment of the workload to ensure it is evenly distributed throughout the workday, preventing spillover into late hours.</li><li>- Regular Check-ins: Implement regular one-on-one check-ins to discuss workload and any personal concerns about work-life balance, allowing for timely interventions.</li><li>- Encourage Rest: Promote the importance of rest and recuperation among employees, possibly by sharing resources or organizing workshops on time management and self-care.</li><li>- Feedback Mechanisms: Establish clear channels for employees to provide feedback on work schedules and any challenges they face, ensuring management is aware and can take action as needed.</li><li>- Awareness Campaigns: Increase awareness about the existing leave policy to ensure all employees fully understand and utilize their leave options effectively.</li></ul></div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="report-section">
+            <h4 class="section-title">Personal Details</h4>
+            <p>Guest (EMP0047) | guest@gmail.com</p>
+        </div>
+
+        <!-- Data Analysis Pre-Conversation -->
+        <div class="report-section">
+            <h4 class="section-title">Data Analysis Pre-Conversation</h4>
+            <p><ul><li><strong>Days_since_joining</strong>: 723</li><li><strong>Days_since_last_leave</strong>: 475</li><li><strong>Annual_Leaves</strong>: 10</li><li><strong>Sick_Leaves</strong>: 8</li><li><strong>Average_Performance_Rating</strong>: 3.0</li></ul></p>
+        </div>
+
+        <!-- Conversation Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Conversation Summary</h4>
+            <p><p>Chatbot: Hello Guest! This is just a quick check-in to see how you&#x27;re doing today; hope all is well!</p><p>Employee: I was very tired at that time.</p><p>Chatbot: What do you think contributed to your exhaustion during that period?</p><p>Employee: My late night work contributed to it.</p><p>Chatbot: How do you think adjusting your work schedule could impact your overall well-being?</p><p>Employee: It could impact as the work should be done timely</p><p>Chatbot: Do you believe your current leave allowance supports a healthy work-life balance?</p><p>Employee: Yup</p><p>Chatbot: What makes you certain about this decision?</p><p>Employee: Because the leave allowance is pretty good.</p><p>Chatbot: What aspects of a good leave allowance do you find most beneficial for your work-life balance?</p><p>Chatbot: ## Insights from Employee-Chatbot Conversation</p><p>### Employee&#x27;s Mood, Concerns, and Sentiments:</p><p>- Mood: The employee appears to be experiencing fatigue, indicating a potentially stressed or weary state of mind. The use of &quot;very tired&quot; suggests a significant level of exhaustion.</p><p>- Concerns: The primary concern expressed by the employee is the impact of late-night work on their exhaustion. However, they do not express any concerns about their leave allowance or work-life balance, indicating satisfaction in these areas.</p><p>- Sentiments: The sentiment towards the current leave policy is positive, as the employee describes it as &quot;pretty good.&quot; This suggests contentment with the allowance and its role in maintaining work-life balance.</p><p>### Key Issues or Recurring Themes:</p><p>- Work Schedule: The primary issue raised is the employee&#x27;s late-night work, which is contributing to their tiredness. It suggests a potential imbalance in work scheduling or workload management.</p><p>- Work-Life Balance: While the leave allowance is seen positively, the conversation hints at possible misalignment between work schedules and personal well-being, as highlighted by the employee&#x27;s tiredness.</p><p>- Leave Allowance: The employee appreciates the leave policy, indicating that it provides adequate support for their needs. This highlights a strong policy in place for leave but may overshadow the need for attention to workload distribution and scheduling.</p><p>### Suggestions and Recommendations:</p><p>1. Work Schedule Adjustment:</p><p>- Flexible Scheduling: Introduce or enhance flexible work schedules that allow employees to manage their work hours better, potentially reducing the need for late-night work.</p><p>- Workload Assessment: Conduct a thorough assessment of the workload to ensure it is evenly distributed throughout the workday, preventing spillover into late hours.</p><p>2. Employee Well-being Initiatives:</p><p>- Regular Check-ins: Implement regular one-on-one check-ins to discuss workload and any personal concerns about work-life balance, allowing for timely interventions.</p><p>- Encourage Rest: Promote the importance of rest and recuperation among employees, possibly by sharing resources or organizing workshops on time manag</p></p>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="report-section">
+            <h4 class="section-title">Sentiment Analysis</h4>
+            <p>Sentiment score: 98 / 100. Flagged: Yes.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 HR Analytics Report System</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
