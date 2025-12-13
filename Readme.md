@@ -61,18 +61,10 @@ The **HR-Employee Chatbot System** is an AI-powered solution designed to enhance
 4. **Set Up Environment Variables**:  
    Create a `.env` file in the `Server` directory:
    ```env
-   DATABASE_URL=postgresql://<username>:<password>@localhost:5432/<database_name>
-   OPENAI_API_KEY=<your_openai_api_key>
-   AWS_ACCESS_KEY_ID=<your_aws_access_key>
-   AWS_SECRET_ACCESS_KEY=<your_aws_secret_key>
+   See the example env inside the `Server` directory 
    ```
 
-5. **Run Database Migrations**:
-   ```bash
-   alembic upgrade head
-   ```
-
-6. **Start the Backend Server**:
+5. **Start the Backend Server**:
    ```bash
    uvicorn main:app --reload
    ```
@@ -95,7 +87,7 @@ The **HR-Employee Chatbot System** is an AI-powered solution designed to enhance
 3. **Set Up Environment Variables**:  
    Create a `.env.local` file:
    ```env
-   NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000
+   See the example env inside the `client` directory
    ```
 
 4. **Start the Frontend Server**:
@@ -103,35 +95,6 @@ The **HR-Employee Chatbot System** is an AI-powered solution designed to enhance
    npm run dev
    ```
    The frontend will be available at: `http://localhost:3000`
-
----
-
-### Backend Setup
-1. **Navigate to the Backend Directory**:
-    ```bash
-    cd server
-    ```
-
-2. **Create a Virtual Environment**:
-    ```bash
-    python -m venv venv
-    ```
-
-3. **Activate the Virtual Environment**:
-    ```bash
-    venv/bin/activate  # Use `venv\Scripts\activate` on Windows
-    ```
-
-4. **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-5. **Start the Backend Server**:
-    ```bash
-    uvicorn main:app --reload
-    ```
-    The backend will be available at: `http://127.0.0.1:8000`
 
 ---
 ## Testing the System
@@ -148,11 +111,3 @@ The **HR-Employee Chatbot System** is an AI-powered solution designed to enhance
 ---
 
 ## Deployment
-
-### Frontend (Vercel)
-- Push the `client` directory to a GitHub repository.
-- Connect the repo to [Vercel](https://vercel.com/) and deploy.
-
-### Backend (Render)
-- Push the `Server` directory to a GitHub repository.
-- Connect the repo to [Render](https://render.com/) and deploy.
