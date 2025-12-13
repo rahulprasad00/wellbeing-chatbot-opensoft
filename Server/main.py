@@ -12,16 +12,23 @@ from sqlalchemy.ext.declarative import declarative_base
 from database.models import Base
 from database.conn import engine
 
+load_dotenv()
+
 app = FastAPI()
 
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
+origins = os.getenv(
+    "FRONTEND_URL",
+    "http://localhost:3000"
+).split(",")
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv("FRONTEND_URL", "http://localhost:3000").split(","),
+    allow_origins=[origin.strip() for origin in origins],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
