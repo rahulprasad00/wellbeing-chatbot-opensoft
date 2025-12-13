@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1in;
+        }
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            word-wrap: break-word;
+        }
+        .container {
+            width: 100%;
+        }
+        .report-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 180px;
+        }
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .section-title {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .report-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        .flagged-banner {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #7f1d1d, #b91c1c, #e11d48);
+            color: #fff;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 24px 0;
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.28);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .flagged-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 35%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.12), transparent 40%);
+            pointer-events: none;
+        }
+        .flagged-icon {
+            z-index: 1;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        .flagged-copy {
+            z-index: 1;
+        }
+        .flagged-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .flagged-note {
+            margin: 6px 0 0;
+            font-size: 14px;
+            color: #ffe4e6;
+        }
+        .footer {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #6c757d;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-container">
+        <!-- Logo -->
+        
+
+        <h2 class="text-center mb-4">Employee Report</h2>
+        <p class="text-center"><strong>Report Date:</strong> 2025-12-13</p>
+        <p class="text-center"><strong>Employee ID:</strong> EMP0047</p>
+
+        <!-- Flagged Notice -->
+        
+        <div class="flagged-banner">
+            <div class="flagged-icon">!</div>
+            <div class="flagged-copy">
+                <div class="flagged-status">Status: Flagged</div>
+                <p class="flagged-note">This employee requires immediate HR attention based on recent signals.</p>
+            </div>
+        </div>
+        
+
+        <!-- Executive Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Executive Summary</h4>
+            <div><p>### Insights Analysis<br>#### Employee&#x27;s Mood, Concerns, and Sentiments:<br>#### Key Issues or Recurring Themes:<br>1. Work-Life Imbalance: The conversation highlights a lack of balance between professional obligations and personal wellbeing, exacerbated by continuous workload pressures.<br>2. Inability to Take Leave: Despite recognizing the need for breaks and leave, the employee struggles with guilt and external pressures that prevent them from taking necessary time off.<br>3. Mental Health Impact: The ongoing stress is impacting the employee’s focus, motivation, and ability to cope, indicating a severe effect on mental health.<br>4. Need for Organizational Support: There is a clear need for organizational changes to support employees in managing workloads and taking leave without fear.<br>#### Suggestions and Recommendations:<br>1. Encourage Open Communication:<br>2. Reevaluate Workload and Expectations:<br>3. Promote and Facilitate Leave:<br>4. Implement Stress Management Programs:<br>5. Establish Clear Boundaries:<br>By addressing these areas, the organization can significantly improve employee wellbeing, reduce burnout, and create a more supportive and productive work environment.</p><ul><li>- Mood: The employee is experiencing significant stress and anxiety, leading to feelings of being chronically drained and mentally exhausted.</li><li>- Concerns: The primary concerns revolve around an overwhelming workload, the inability to take sufficient leave, and the resultant negative impact on mental health and overall wellbeing.</li><li>- Sentiments: The employee expresses feelings of guilt and discomfort about taking leave, alongside anxiety due to constant pressure and the fear of being judged.</li><li>- Action: The organization should foster an environment where employees feel comfortable discussing their workload and mental health concerns without fear of judgment.</li><li>- Implementation: Regular one-on-one check-ins with managers to discuss workload and mental health, allowing employees to voice concerns and seek support.</li><li>- Action: Assess current workload and expectations to ensure they are realistic and manageable for employees.</li><li>- Implementation: Conduct a team review to identify opportunities to redistribute tasks and provide additional resources or support where needed.</li><li>- Action: Encourage a culture where taking leave is normalized and supported.</li><li>- Implementation: Create clear policies and communicate the importance of taking breaks, potentially introducing mandatory wellness days to ensure employees take time off.</li><li>- Action: Provide employees with resources and tools to manage stress and improve mental health.</li><li>- Implementation: Offer workshops or sessions focused on stress management techniques, mindfulness, and work-life balance strategies.</li><li>- Action: Encourage setting clear boundaries between work and personal life to prevent burnout.</li><li>- Implementation: Establish guidelines for after-hours communication and encourage employees to disconnect outside of work hours.</li></ul></div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="report-section">
+            <h4 class="section-title">Personal Details</h4>
+            <p>Guest (EMP0047) | guest@gmail.com</p>
+        </div>
+
+        <!-- Data Analysis Pre-Conversation -->
+        <div class="report-section">
+            <h4 class="section-title">Data Analysis Pre-Conversation</h4>
+            <p><ul><li><strong>Days_since_joining</strong>: 723</li><li><strong>Days_since_last_leave</strong>: 475</li><li><strong>Annual_Leaves</strong>: 10</li><li><strong>Sick_Leaves</strong>: 8</li><li><strong>Average_Performance_Rating</strong>: 3.0</li></ul></p>
+        </div>
+
+        <!-- Conversation Summary -->
+        <div class="report-section">
+            <h4 class="section-title">Conversation Summary</h4>
+            <p><p>Chatbot: Hello Guest! This is just a quick check-in to see how you&#x27;re doing today—hope all is well with you!</p><p>Employee: “Yes, it has. I haven’t been able to take enough leave, and over time that’s left me feeling chronically stressed, mentally exhausted, and drained. It’s started to affect my mood, focus, and overall wellbeing.”</p><p>Chatbot: What steps or changes have you considered to help manage or alleviate this ongoing stress and exhaustion?</p><p>Employee: “I’ve thought about taking regular breaks or asking for support, but the constant workload and pressure make it hard to follow through. I feel anxious and mentally exhausted most days, and the ongoing stress has started to affect my focus, motivation, and ability to cope.”</p><p>Chatbot: What small, manageable change could you realistically implement to start alleviating some of the stress and exhaustion you’re experiencing?</p><p>Employee: “Even taking short breaks or stepping away briefly could help, but right now the stress and mental exhaustion make it hard to do consistently. I’m feeling anxious and drained, and the lack of balance is already affecting my focus, energy, and overall wellbeing.”</p><p>Chatbot: Do you feel comfortable taking leave when you need it, or do you feel guilty about it?</p><p>Employee: “I don’t feel comfortable taking leave and often feel guilty about it. The pressure to stay available and fear of being judged make me anxious, and over time this has left me mentally exhausted and affected my wellbeing and ability to cope.”</p><p>Chatbot: What steps do you think could help create a healthier balance between your professional obligations and personal well-being?</p><p>Employee: “I think clearer boundaries, regular time off, and realistic workload expectations would help, but right now the constant pressure makes it hard to implement any of that. I feel anxious and mentally exhausted, and the imbalance is already affecting my wellbeing, focus, and ability to cope.”</p><p>Chatbot: What small changes or actions, even if temporary, could you introduce to alleviate some pressure and start improving your situation?</p><p>Chatbot: ### Insights Analysis</p><p>#### Employee&#x27;s Mood, Concerns, and Sentiments:</p><p>- Mood: The employee is experiencing significant stress and anxiety, leading to feelings of being chronically drained and mentally exhausted.</p><p>- Concerns: The primary concerns revolve around an overwhelming workload, the inability to take sufficient leave, and the resultant negative impact on mental health and overall wellbeing.</p><p>- Sentiments: The employee expresses feelings of guilt and discomfort about taking leave, alongside anxiety due to constant pressure and the fear of being judged.</p><p>#### Key Issues or Recurring Themes:</p><p>1. Work-Life Imbalance: The conversation highlights a lack of balance between professional obligations and personal wellbeing, exacerbated by continuous workload pressures.</p><p>2. Inability to Take Leave: Despite recognizing the need for breaks and leave, the employee struggles with guilt and ex</p></p>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="report-section">
+            <h4 class="section-title">Sentiment Analysis</h4>
+            <p>Sentiment score: 100 / 100. Flagged: Yes.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 HR Analytics Report System</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
