@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants, cubicBezier } from "framer-motion";
 import { toast } from "sonner"; // Import toast from sonner
 
 // CSS classes to be added to globals.css if not already there
@@ -66,31 +66,32 @@ export default function HRLoginModal() {
   const router = useRouter();
 
   // Animation variants
-  const formVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      scale: 0.95,
+ const formVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: cubicBezier(0.16, 1, 0.3, 1), // ✅ fully typed
     },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 0.95,
+    transition: {
+      duration: 0.3,
+      ease: cubicBezier(0.16, 1, 0.3, 1), // ✅ fully typed
     },
-    exit: {
-      opacity: 0,
-      y: -20,
-      scale: 0.95,
-      transition: {
-        duration: 0.3,
-        ease: "easeIn",
-      },
-    },
-  };
+  },
+};
+
 
   // zod validation
   const loginSchema = z.object({
