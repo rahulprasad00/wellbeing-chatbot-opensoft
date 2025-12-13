@@ -14,6 +14,11 @@ from database.conn import engine
 
 app = FastAPI()
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],  # Replace with frontend URL in production
