@@ -27,7 +27,6 @@ interface TypingIndicator {
 }
 
 export default function ConversationPage() {
-  // const server = "http://127.0.0.1:8000";
 
   const TotalQuestions = 5;
 
@@ -752,7 +751,7 @@ export default function ConversationPage() {
                 }}
                 className="bg-green-500 hover:bg-green-600 text-black cursor-pointer shrink-0"
                 size="icon"
-                onClick={handleSendMessage}
+                onClick={() => handleSendMessage()}
                 disabled={!inputValue.trim() || isLoading}
               >
                 <Send className="h-5 w-5" />

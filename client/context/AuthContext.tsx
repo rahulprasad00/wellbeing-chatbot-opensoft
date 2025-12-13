@@ -161,7 +161,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signInHR = async (email: string, password: string) => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/user/hr-login", {
+      const response = await fetch(`${server}/api/user/hr-login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -206,7 +206,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const fetchHRProfile = async () => {
     try {
       const token = localStorage.getItem("access_token");
-      const response = await fetch("http://127.0.0.1:8000/api/user/hr", {
+      const response = await fetch(`${server}/api/user/hr`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

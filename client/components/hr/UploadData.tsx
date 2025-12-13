@@ -33,6 +33,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { server } from "@/utils";
 
 interface FileUploadStatus {
   id: string;
@@ -300,7 +301,7 @@ export function UploadData() {
         console.log("Sending file to table:", fileItem.targetTable); // Debug log
 
         const response = await axios.post(
-          `http://127.0.0.1:8000/api/data/ingest?table=${fileItem.targetTable}`, // Add as URL parameter too
+          `${server}/api/data/ingest?table=${fileItem.targetTable}`, // Add as URL parameter too
           formData,
           {
             headers: {

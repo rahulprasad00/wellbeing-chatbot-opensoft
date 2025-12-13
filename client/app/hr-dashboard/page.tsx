@@ -18,6 +18,7 @@ import { useAuth } from "@/context/AuthContext";
 import axios from "axios";
 import { UploadData } from "@/components/hr/UploadData";
 import { toast } from "sonner"; // Import toast from sonner
+import { server } from "@/utils";
 
 interface Employee {
   Employee_ID: string;
@@ -33,8 +34,6 @@ interface Employee {
 }
 
 const HRDashboard: React.FC = () => {
-  const server = "http://127.0.0.1:8000";
-
   const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(true);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");

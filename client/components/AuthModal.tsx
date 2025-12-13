@@ -22,21 +22,19 @@ import { FaTwitter } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner"; // Import toast from sonner
 import { PassThrough } from "stream";
+import { server } from "@/utils";
 
 // Add this to your globals.css
 
 // API call to check employee ID via backend.
 async function checkEmployeeId(employeeId: string): Promise<boolean> {
   try {
-    const response = await fetch(
-      `http://127.0.0.1:8000/api/user/check/${employeeId}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(`${server}/api/user/check/${employeeId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -227,7 +225,7 @@ export default function AuthModal() {
 
         // await signIn(LoginformData.email, LoginformData.password);
         const res = await axios.post(
-          "http://127.0.0.1:8000/api/user/login",
+          `${server}/api/user/login`,
           {
             email: LoginformData.email,
             password: LoginformData.password,
@@ -307,7 +305,7 @@ export default function AuthModal() {
           RegisterformData.name
         );
         const res = await axios.post(
-          "http://127.0.0.1:8000/api/user/register",
+          `${server}/api/user/register`,
           {
             email: RegisterformData.email,
             emp_id: regEmployeeId,
@@ -351,7 +349,7 @@ export default function AuthModal() {
       const user = await signInWithGoogle();
       const email = user.email;
       const name = user.displayName;
-      const res = await axios.post("http://127.0.0.1:8000/api/user/oauth", {
+      const res = await axios.post(`${server}/api/user/oauth`, {
         email: email,
         emp_id: regEmployeeId,
         name: name,
@@ -376,7 +374,7 @@ export default function AuthModal() {
       const user = await signInWithTwitter();
       const email = user.email;
       const name = user.displayName;
-      const res = await axios.post("http://127.0.0.1:8000/api/user/oauth", {
+      const res = await axios.post(`${server}/api/user/oauth`, {
         email: email,
         emp_id: regEmployeeId,
         name: name,
