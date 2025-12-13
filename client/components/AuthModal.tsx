@@ -407,7 +407,7 @@ export default function AuthModal() {
       scale: 1,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
+        ease: [0.16, 1, 0.3, 1], // "easeOut" cubic-bezier
       },
     },
     exit: {
@@ -416,7 +416,7 @@ export default function AuthModal() {
       scale: 0.95,
       transition: {
         duration: 0.3,
-        ease: "easeIn",
+        ease: [0.16, 1, 0.3, 1], // "easeIn" approximate cubic-bezier
       },
     },
   };
