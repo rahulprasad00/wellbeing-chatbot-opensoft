@@ -19,9 +19,8 @@ import { FcGoogle } from "react-icons/fc";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import { FaTwitter } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants, cubicBezier } from "framer-motion";
 import { toast } from "sonner"; // Import toast from sonner
-import { PassThrough } from "stream";
 import { server } from "@/utils";
 
 // Add this to your globals.css
@@ -395,31 +394,32 @@ export default function AuthModal() {
   };
 
   // Animation variants
-  const formVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      scale: 0.95,
+  const formVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: cubicBezier(0.16, 1, 0.3, 1), // ✅ fully typed
     },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        ease: [0.16, 1, 0.3, 1], // "easeOut" cubic-bezier
-      },
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 0.95,
+    transition: {
+      duration: 0.3,
+      ease: cubicBezier(0.16, 1, 0.3, 1), // ✅ fully typed
     },
-    exit: {
-      opacity: 0,
-      y: -20,
-      scale: 0.95,
-      transition: {
-        duration: 0.3,
-        ease: [0.16, 1, 0.3, 1], // "easeIn" approximate cubic-bezier
-      },
-    },
-  };
+  },
+};
+
 
   return (
     <Dialog open={signInModalVisible} onOpenChange={handleOpenChange}>
