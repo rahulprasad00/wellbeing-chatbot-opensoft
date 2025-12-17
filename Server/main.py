@@ -25,11 +25,10 @@ origins = os.getenv(
     "http://localhost:3000"
 ).split(",")
 
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[origin.strip() for origin in origins],
-    allow_credentials=False,
+    allow_origins=["*"],  # Updated to allow all origins for production
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
